@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/video-js.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Code 4 Kids</title>
+
+</head>
+
+<body>
+    <header>
+        <div id="navigatie">
+            <nav>
+
+                <svg id="logoHeader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="56" height="56" viewBox="0 0 56 56">
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect class="cls-1" width="56" height="56" />
+                        </clipPath>
+                    </defs>
+                    <g id="logo" class="cls-2">
+                        <g id="Group_10" data-name="Group 10">
+                            <g id="Group_1" data-name="Group 1" transform="translate(23.45 0.467)">
+                                <path id="Path_3" data-name="Path 3" class="cls-3"
+                                    d="M222.25,30.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,222.25,30.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,222.25,22.333Z"
+                                    transform="translate(-217 -20)" />
+                            </g>
+                            <g id="Group_2" data-name="Group 2" transform="translate(45.5 23.333)">
+                                <path id="Path_4" data-name="Path 4" class="cls-3"
+                                    d="M411.25,226.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,411.25,226.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,411.25,218.333Z"
+                                    transform="translate(-406 -216)" />
+                            </g>
+                            <g id="Group_3" data-name="Group 3" transform="translate(23.333 44.8)">
+                                <path id="Path_5" data-name="Path 5" class="cls-3"
+                                    d="M221.25,410.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,221.25,410.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,221.25,402.333Z"
+                                    transform="translate(-216 -400)" />
+                            </g>
+                            <g id="Group_4" data-name="Group 4" transform="translate(0 22.633)">
+                                <path id="Path_6" data-name="Path 6" class="cls-3"
+                                    d="M21.25,220.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,21.25,220.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,21.25,212.333Z"
+                                    transform="translate(-16 -210)" />
+                            </g>
+                            <g id="Group_5" data-name="Group 5">
+                                <path id="Path_7" data-name="Path 7" class="cls-3"
+                                    d="M44,72a27.844,27.844,0,0,1-15.864-4.924,1.167,1.167,0,1,1,1.323-1.922,25.67,25.67,0,1,0,27.107-43.54,1.167,1.167,0,0,1,1.144-2.034A28,28,0,0,1,44,72ZM24.389,63.481a1.163,1.163,0,0,1-.852-.369l-.084-.091a1.167,1.167,0,1,1,1.714-1.584l.074.08a1.166,1.166,0,0,1-.852,1.964ZM20.84,58.725a1.166,1.166,0,0,1-1.007-.576A28,28,0,0,1,44,16c.676,0,1.359.024,2.03.073a1.167,1.167,0,1,1-.167,2.327c-.616-.044-1.243-.067-1.863-.067A25.673,25.673,0,0,0,21.845,56.967a1.167,1.167,0,0,1-1.005,1.757ZM51.785,19.48a1.163,1.163,0,0,1-.338-.05l-.107-.032a1.167,1.167,0,1,1,.667-2.236l.116.035a1.167,1.167,0,0,1-.338,2.284Z"
+                                    transform="translate(-16 -16)" />
+                            </g>
+                            <g id="Group_6" data-name="Group 6" transform="translate(8.633 8.828)">
+                                <path id="Path_8" data-name="Path 8" class="cls-3"
+                                    d="M123.056,129.777H95.444A5.451,5.451,0,0,1,90,124.333v-24a1.167,1.167,0,1,1,2.333,0v24a3.115,3.115,0,0,0,3.111,3.111h27.611a1.165,1.165,0,0,1,.915.442,1.165,1.165,0,0,1,.587-.828l.073-.042a1.167,1.167,0,0,1,1.184,2.011l-.129.074a1.167,1.167,0,0,1-1.478-.3A1.167,1.167,0,0,1,123.056,129.777Zm4.278-5.661a1.167,1.167,0,0,1-1.167-1.167V97.11A3.115,3.115,0,0,0,123.056,94H97.284a1.167,1.167,0,1,1,0-2.333h25.772A5.451,5.451,0,0,1,128.5,97.11V122.95A1.167,1.167,0,0,1,127.333,124.116Zm-35.4-28.291a1.167,1.167,0,0,1-.955-1.836q.043-.061.087-.12a1.167,1.167,0,0,1,1.875,1.389l-.05.069A1.165,1.165,0,0,1,91.937,95.826Z"
+                                    transform="translate(-90 -91.666)" />
+                            </g>
+                            <g id="Group_7" data-name="Group 7" transform="translate(22.167 17.967)">
+                                <path id="Path_9" data-name="Path 9" class="cls-3"
+                                    d="M207.165,188.666a1.167,1.167,0,0,1-.98-1.8c3.537-5.5,10.272-15.969,10.486-16.311a1.167,1.167,0,0,1,2,1.209c-.117.195-8.081,12.575-10.519,16.364A1.166,1.166,0,0,1,207.165,188.666Z"
+                                    transform="translate(-206 -169.999)" />
+                            </g>
+                            <g id="Group_8" data-name="Group 8" transform="translate(33.833 21.467)">
+                                <path id="Path_10" data-name="Path 10" class="cls-3"
+                                    d="M307.167,212.834a1.167,1.167,0,0,1-.648-2.137l5.816-3.877-4.827-4.827a1.167,1.167,0,0,1,1.65-1.65l5.833,5.833a1.167,1.167,0,0,1-.178,1.8l-7,4.667A1.162,1.162,0,0,1,307.167,212.834Z"
+                                    transform="translate(-306 -200)" />
+                            </g>
+                            <g id="Group_9" data-name="Group 9" transform="translate(12.833 21.466)">
+                                <path id="Path_11" data-name="Path 11" class="cls-3"
+                                    d="M133,212.832a1.163,1.163,0,0,1-.825-.342l-5.833-5.833a1.167,1.167,0,0,1,.178-1.8l7-4.667a1.167,1.167,0,1,1,1.294,1.941L129,206.013l4.827,4.827a1.167,1.167,0,0,1-.825,1.992Z"
+                                    transform="translate(-126 -199.998)" />
+                            </g>
+                        </g>
+                        <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-3" width="2.333" height="2.333"
+                            transform="translate(14 13.3)" />
+                        <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-3" width="2.333" height="2.333"
+                            transform="translate(40.833 13.3)" />
+                        <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-3" width="2.333" height="2.333"
+                            transform="translate(40.833 40.133)" />
+                        <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-3" width="2.333" height="2.333"
+                            transform="translate(14 40.133)" />
+                    </g>
+                </svg>
+
+
+                <ul>
+                    <li><a href="#">over ons</a></li>
+                    <li><a href="#">lesmateriaal</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="header">
+            <div id="headerBox">
+
+                <h2>
+                    <strong>Van beginner naar expert</strong></h2>
+                <h2> <strong>Het lesmateriaal brengt je verder</strong> </h2>
+
+                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem
+                    malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id
+                    elit
+                    non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                    dolor
+                    auctor.</p>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+
+        <div id="content">
+
+            <div id="ex1" class="modal">
+                <h1 class="ml8">
+                    <span class="letters-container">
+                        <span class="letters letters-left">Goed bezig!</span>
+                    </span>
+                    <span class="circle circle-white"></span>
+                    <span class="circle circle-dark"></span>
+                    <span class="circle circle-container"><span class="circle circle-dark-dashed"></span></span>
+                </h1>
+            </div>
+
+            <div id="accordion">
+
+                <p id="playlist">Playlist</p>
+
+                <section class="slide">
+                    <div class="onderwerp">
+                        <h3>Algemene introductie</h3>
+
+                        <div class="buttonsAcc">
+                            <div class="videobekeken"></div>
+                            <button id="pink" class="accBut"> <span>intro</span></button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="videoWrapper">
+                            <video class="video-js" id="video0" autoplay muted data-setup='{"fluid": true}'>
+                                <source src="video/mov_bbb.mp4" type="video/mp4"> Your browser does not support HTML5
+                                video.
+                            </video>
+                            <div class=videoButt></div>
+                            <a href="#ex1" rel="modal:open"> <button class="checkVideo">
+                                    <div class="checkedicon"></div>
+                                </button></a>
+
+                            <button class="rewind">
+                                <div class="rewindicon"></div>
+                            </button>
+                            <button class="playPause">
+                                <div class="playicon"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+
+                <section class="slide">
+                    <div class="onderwerp">
+                        <h3>Workshop 1: Kleuren met code</h3>
+                        
+                        <div class="buttonsAcc">
+                            <div class="videobekeken"></div>
+                            <button class="download"><img src="img/download-butt@2x.svg"
+                                    alt="download button"><span>download</span></button>
+                            <button class="accBut"> <span>workshop</span></button>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="videoWrapper">
+                            <video class="video-js" id="video1" autoplay muted data-setup='{"fluid": true}'>
+                                <source src="video/mov_bbb.mp4" type="video/mp4"> Your browser does not support HTML5
+                                video.
+                            </video>
+
+                            <a href="#ex1" rel="modal:open"> <button class="checkVideo">
+                                    <div class="checkedicon"></div>
+                                </button></a>
+
+                            <button class="rewind">
+                                <div class="rewindicon"></div>
+                            </button>
+                            <button class="playPause">
+                                <div class="playicon"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+                <section class="slide">
+                    <div class="onderwerp">
+                        <h3>Workshop 2: Vormen maken</h3>
+
+                        <div class="buttonsAcc">
+                            <div class="videobekeken"></div>
+                            <button class="accBut"> <span>workshop</span></button>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="videoWrapper">
+                            <video class="video-js" id="video2" autoplay muted data-setup='{"fluid": true}'>
+                                <source src="video/mov_bbb.mp4" type="video/mp4"> Your browser does not support HTML5
+                                video.
+                            </video>
+
+                            <a href="#ex1" rel="modal:open"> <button class="checkVideo">
+                                    <div class="checkedicon"></div>
+                                </button></a>
+
+                            <button class="rewind">
+                                <div class="rewindicon"></div>
+                            </button>
+                            <button class="playPause">
+                                <div class="playicon"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+                <section class="slide">
+                    <div class="onderwerp">
+                        <h3>Workshop 3: Beweging</h3>
+
+                        <div class="buttonsAcc">
+                            <div class="videobekeken"></div>
+                            <button class="download"><img src="img/download-butt@2x.svg"
+                                    alt="download button"><span>download</span></button>
+                            <button class="accBut"> <span>workshop</span></button>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="videoWrapper">
+                            <video class="video-js" id="video3" autoplay muted data-setup='{"fluid": true}'>
+                                <source src="video/mov_bbb.mp4" type="video/mp4"> Your browser does not support HTML5
+                                video.
+                            </video>
+                             <a href="#ex1" rel="modal:open"> <button class="checkVideo">
+                                    <div class="checkedicon"></div>
+                                </button></a>
+
+                            <button class="rewind">
+                                <div class="rewindicon"></div>
+                            </button>
+                            <button class="playPause">
+                                <div class="playicon"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+
+                <section class="slide">
+                    <div class="onderwerp">
+                        <h3>Workshop 4: Variablene gebruiken</h3>
+
+                        <div class="buttonsAcc">
+                            <div class="videobekeken"></div>
+                            <button class="accBut"> <span>workshop</span></button>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="videoWrapper">
+                            <video class="video-js" id="video4" autoplay muted data-setup='{"fluid": true}'>
+                                <source src="video/mov_bbb.mp4" type="video/mp4"> Your browser does not support HTML5
+                                video.
+                            </video>
+
+                           <a href="#ex1" rel="modal:open"> <button class="checkVideo">
+                                    <div class="checkedicon"></div>
+                                </button></a>
+
+                            <button class="rewind">
+                                <div class="rewindicon"></div>
+                            </button>
+                            <button class="playPause">
+                                <div class="playicon"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+            </div>
+
+
+            <div class="clear"> </div>
+        </div>
+
+        <div id="content2">
+
+            <h3>Support</h3>
+            <div id="support">
+                <h2>Kom je er niet uit?</h2>
+                <h2> Wij helpen je graag verder</h2>
+            </div>
+
+            <div class="imgDiv">
+                <img src="img/kal-visuals-592091-unsplash.jpg" alt="Kal Visuals">
+                <h4>Kal Visuals</h4>
+                <p>Hoofd contactpersoon</p>
+                <button class="mailButton"><span>email</span></button>
+            </div>
+
+
+            <div class="imgDiv">
+                <img src="img/giorgio-encinas-781653-unsplash.jpg" alt="Kal Visuals">
+                <h4>Giorgio Encinas</h4>
+                <p>Hoofd contactpersoon</p>
+                <button class="mailButton"><span>email</span></button>
+            </div>
+
+
+            <div class="imgDiv">
+                <img src="img/norman-toth-177973-unsplash.jpg" alt="Kal Visuals">
+                <h4>Norman Toth</h4>
+                <p>Hoofd contactpersoon</p>
+                <button class="mailButton"><span>email</span></button>
+            </div>
+
+
+            <div class="imgDiv">
+                <img src="img/alina-kovalchuk-1143928-unsplash.jpg" alt="Kal Visuals">
+                <h4>Alina Kovalchuk</h4>
+                <p>Hoofd contactpersoon</p>
+                <button class="mailButton"><span>email</span></button>
+            </div>
+
+
+
+
+            <div class="clear"></div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="content3">
+            <h2>Klaar voor de </h2>
+            <h2>volgende uitdaging?</h2>
+            <p>In ons expertprogramma vind je lessen voor gevorderden</p>
+            <button id="komMaarOp">kom maar op</button>
+        </div>
+
+        <div id="footer1">
+            <section>
+                <div class="checkboxThree">
+                    <input type="checkbox" value="1" id="checkboxThreeInput" name="" />
+                    <label for="checkboxThreeInput"></label>
+                </div>
+            </section>
+            <p> switch mode</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
